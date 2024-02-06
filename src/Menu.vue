@@ -1,11 +1,9 @@
 <script>
 
-import Banner from './components/Banner.vue'
-import Drinks from './components/Drinks.vue'
+import Drinks from './components/menu/Drinks.vue'
 
 export default {
   components: {
-    Banner,
     Drinks
   }
 }

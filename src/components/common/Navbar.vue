@@ -70,8 +70,7 @@ header {
           <router-link to="/menu">Meny</router-link>
         </li>
         <li><router-link to="/contact">Kontakt & Övrigt</router-link></li>
-        <li><a href="admin.html">Kaféhantering</a></li>
-        <li><a href="chart.html">Chart</a></li>
+
       </ul>
     </nav>
     <div id="lang">

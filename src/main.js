@@ -5,12 +5,14 @@ import App from './App.vue'
 import Menu from './Menu.vue'
 import Home from './Home.vue'
 import Contact from './Contact.vue'
+import MenuItem from './MenuItem.vue'
 
 
 const routes = [
   { path: '/', component: Home },
   { path: '/menu', component: Menu },
-  { path: '/contact', component: Contact }
+  { path: '/contact', component: Contact },
+  { path: '/menuItem/:drinkId', component: MenuItem }
 ]
 
 const router = createRouter({

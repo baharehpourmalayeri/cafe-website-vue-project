@@ -1,14 +1,12 @@
 
 <script>
 import Drink from './Drink.vue'
+import axios from 'axios';
 
 export default {
   created() {
-    fetch('https://api.sampleapis.com/coffee/hot')
-      .then((response) => response.json())
-      .then((drinks) => {
-        this.drinks = drinks
-      })
+    axios.get('https://api.sampleapis.com/coffee/hot')
+      .then(response => this.drinks = response.data)
   },
   data() {
     return {
@@ -27,7 +25,7 @@ export default {
   </div>
   <div class="menu-container">
     <Drink v-for="drink in drinks" :title="drink.title" :image="drink.image" :description="drink.description"
-      :ingredients="drink.ingredients" />
+      :ingredients="drink.ingredients" :id="drink.id" />
   </div>
 </template>
 

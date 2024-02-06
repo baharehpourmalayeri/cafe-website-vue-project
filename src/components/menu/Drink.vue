@@ -1,11 +1,12 @@
 <script>
 export default {
   props: {
+    id: Number,
     image: String,
     title: String,
     description: String,
     ingredients: Array
-  }
+  },
 }
 </script>
 
@@ -73,6 +74,20 @@ export default {
   grid-area: title;
   grid-row: 1;
   width: 100%;
+}
+
+.menu-item h4 a {
+  font-family: heading-font, Arial, sans-serif;
+  background-color: rgb(53, 41, 34);
+  color: rgb(209, 188, 173);
+  font-size: 25px;
+  padding: 20px 0px;
+  text-align: center;
+  margin: 0 auto;
+  grid-area: title;
+  grid-row: 1;
+  width: 100%;
+
 }
 
 .menu-item img {
@@ -164,7 +179,7 @@ export default {
 
 <template>
   <div class="menu-item">
-    <h4>{{ title }}</h4>
+    <h4><router-link :to="'/menuItem/' + id">{{ title }}</router-link></h4>
     <img :src="image" alt="hot-drink">
     <div class="menu-show">
       <div class="menu-box">
@@ -172,7 +187,7 @@ export default {
           <p class="description">{{ description }}</p>
           <p class="title-ing">Ingredients:</p>
           <ul>
-            <li v-for="ingredient in ingredients">{{ ingredient }}</li>
+            <li v-for=" ingredient  in  ingredients ">{{ ingredient }}</li>
           </ul>
         </div>
       </div>

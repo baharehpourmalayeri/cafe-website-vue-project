@@ -1,8 +1,8 @@
 <script>
 
-import Navbar from './components/Navbar.vue'
-import Banner from './components/Banner.vue'
-import Footer from './components/Footer.vue'
+import Navbar from './components/common/Navbar.vue'
+import Banner from './components/common/Banner.vue'
+import Footer from './components/common/Footer.vue'
 
 export default {
   components: {
